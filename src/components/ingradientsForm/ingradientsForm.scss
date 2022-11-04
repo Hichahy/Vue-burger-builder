@@ -1,0 +1,54 @@
+.ingradients-form-container {
+  padding: 10px 30px;
+
+  h2 {
+    font-family: 'Pacifico', cursive;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+
+    .maxAmount {
+      background: #ff7373;
+      color: #b5b5b5;
+    }
+
+    li {
+      display: flex;
+      background: #ededed;
+      margin: 10px 20px;
+      padding: 10px;
+      border-radius: 31px;
+      align-items: center;
+      width: 10rem;
+      justify-content: space-between;
+
+      p {
+        font-size: 40px;
+        margin: 0;
+      }
+
+      button {
+        cursor: pointer;
+        border: none;
+        background-color: white;
+        border-radius: 50%;
+        padding: 10px;
+        height: 35px;
+        font-size: 24px;
+        width: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          background-color: rgb(107, 255, 129);
+        }
+      }
+    }
+  }
+}

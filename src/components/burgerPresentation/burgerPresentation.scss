@@ -1,0 +1,187 @@
+.burger-pre-containter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0;
+  height: 34rem;
+}
+
+.title-pre {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin-bottom: 2rem;
+
+  h2 {
+    font-family: 'Pacifico', cursive;
+    margin-top: 0;
+  }
+}
+
+.ingradietns-box {
+  overflow: scroll;
+  min-width: 36rem;
+  border-radius: 30px;
+}
+
+.black-roll-up {
+  height: 10rem;
+  width: 100%;
+  background: linear-gradient(#676767, #181818);
+  border-radius: 50% 50% 0 0;
+  box-shadow: inset -15px 0 #616161;
+  margin: 10px 0;
+  position: relative;
+}
+
+.roll-up {
+  height: 10rem;
+  width: 100%;
+  background: linear-gradient(#bc581e, #e27b36);
+  border-radius: 50% 50% 0 0;
+  box-shadow: inset -15px 0 #c15711;
+  margin: 10px 0;
+  position: relative;
+}
+
+.roll-center {
+  height: 4rem;
+  width: 100%;
+  background: linear-gradient(#bc581e, #e27b36);
+  box-shadow: inset -15px 0 #c15711;
+  margin: 10px 0;
+  position: relative;
+}
+
+.roll-center-black {
+  height: 4rem;
+  width: 100%;
+  background: linear-gradient(#676767, #181818);
+  box-shadow: inset -15px 0 #616161;
+  margin: 10px 0;
+  position: relative;
+}
+
+.roll-bottom {
+  height: 5rem;
+  width: 100%;
+  background: linear-gradient(#bc581e, #e27b36);
+  border-radius: 0 0 10% 10%;
+  box-shadow: inset -15px 0 #c15711;
+  margin: 10px 0;
+  position: relative;
+}
+
+.roll-bottom-black {
+  height: 5rem;
+  width: 100%;
+  background: linear-gradient(#676767, #181818);
+  border-radius: 0 0 10% 10%;
+  box-shadow: inset -15px 0 #616161;
+  margin: 10px 0;
+  position: relative;
+}
+
+.fish {
+  width: 100%;
+  height: 4rem;
+  margin: 10px 0;
+  border-radius: 15px;
+  background: linear-gradient(#f94f4f, #FF8C69);
+}
+
+.meat {
+  width: 100%;
+  height: 4rem;
+  background: linear-gradient(#7f3608, #702e05);
+  margin: 10px 0;
+  border-radius: 15px;
+}
+
+.cheese {
+  width: 100%;
+  height: 3rem;
+  margin: 10px 0;
+  background: linear-gradient(#f4d004, #d6bb22);
+  border-radius: 20px;
+}
+
+.salad {
+  width: 100%;
+  height: 2rem;
+  margin: 10px 0;
+  background: linear-gradient(#228c1d, #91ce50);
+  border-radius: 20px;
+}
+
+.bacon {
+  width: 100%;
+  height: 2rem;
+  border-radius: 10px;
+  background: linear-gradient(#ff3700, #e9c9bd);
+  margin: 10px 0;
+}
+
+.seeds {
+  position: absolute;
+  width: 10%;
+  height: 15%;
+  background-color: white;
+  left: 30%;
+  top: 50%;
+  border-radius: 40%;
+  transform: rotate(-20deg);
+  box-shadow: inset -2px -3px #c9c9c9;
+}
+
+.seeds::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: -170%;
+  top: -260%;
+  transform: rotate(60deg);
+  border-radius: 40%;
+  box-shadow: inset -1px -2px #c9c9c9;
+}
+
+.seeds::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: 180%;
+  top: -50%;
+  transform: rotate(60deg);
+  border-radius: 40%;
+  box-shadow: inset -1px -3px #c9c9c9;
+}
+
+.seeds2 {
+  position: absolute;
+  width: 10%;
+  height: 15%;
+  background-color: white;
+  left: 64%;
+  top: 50%;
+  border-radius: 40%;
+  transform: rotate(10deg);
+  box-shadow: inset -3px -0px #c9c9c9;
+}
+
+.seeds2::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  left: 150%;
+  top: -130%;
+  border-radius: 40%;
+  transform: rotate(90deg);
+  box-shadow: inset 1px 3px #c9c9c9;
+}
