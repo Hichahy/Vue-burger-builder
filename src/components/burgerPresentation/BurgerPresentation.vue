@@ -2,43 +2,43 @@
   <div class="burger-pre-containter">
     <div class="title-pre">
       <h2>Your crazy burger</h2>
-      <ToggleBtn :blackRoll="blackRoll" @onToggle="toggle" />
+      <ToggleBtn :blackBun="blackBun" @onToggle="toggle" />
     </div>
-    <div class="ingradietns-box">
-      <div :class="`${blackRoll ? 'black-roll-up' : 'roll-up '}`">
+    <div class="ingredients-box">
+      <div :class="`${blackBun ? 'black-bun-up' : 'bun-up '}`">
         <div class="seeds"></div>
         <div class="seeds2"></div>
       </div>
       <div
-        v-for="i in ingradientsCollect"
+        v-for="i in ingredientsCollect"
         :key="i"
-        :class="`${blackRoll && i === 'roll-center' ? 'roll-center-black' : i}`"
+        :class="`${blackBun && i === 'bun-center' ? 'bun-center-black' : i}`"
       ></div>
-      <div :class="`${blackRoll ? 'roll-bottom-black' : 'roll-bottom '}`"></div>
+      <div :class="`${blackBun ? 'bun-bottom-black' : 'bun-bottom '}`"></div>
     </div>
   </div>
-  <IngradientsForm :ingradientsCollect="ingradientsCollect" />
+  <IngredientsForm :ingredientsCollect="ingredientsCollect" />
 </template>
 
 <script>
-import IngradientsForm from "../ingradientsForm/IngradientsForm.vue";
+import IngredientsForm from "../ingredientsForm/IngredientsForm.vue";
 import ToggleBtn from "../layout/toggleBtn/ToggleBtn.vue";
 import "./burgerPresentation.scss";
 
 export default {
   components: {
-    IngradientsForm,
+    IngredientsForm,
     ToggleBtn,
   },
   data() {
     return {
-      ingradientsCollect: [],
-      blackRoll: false,
+      ingredientsCollect: [],
+      blackBun: false,
     };
   },
   methods: {
     toggle() {
-      this.blackRoll = !this.blackRoll;
+      this.blackBun = !this.blackBun;
     },
   },
 };
