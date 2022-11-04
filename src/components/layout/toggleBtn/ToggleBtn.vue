@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="toggle-title">Black Roll?</p>
+    <p class="toggle-title">Black Bun?</p>
     <label class="switch">
       <input type="checkbox" @click="toggle" />
       <span class="slider round"></span>
@@ -12,7 +12,7 @@
 import "./toggleBtn.scss";
 
 export default {
-  props: ["blackRoll"],
+  props: ["blackBun"],
   data() {
     return {};
   },
