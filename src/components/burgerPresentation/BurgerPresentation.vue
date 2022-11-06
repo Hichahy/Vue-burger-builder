@@ -18,6 +18,9 @@
     </div>
   </div>
   <IngredientsForm :ingredientsCollect="ingredientsCollect" />
+  <div class="order-btn-box">
+    <button class="order-btn">Order Now!</button>
+  </div>
 </template>
 
 <script>

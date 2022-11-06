@@ -46,7 +46,24 @@
         justify-content: center;
 
         &:hover {
-          background-color: rgb(107, 255, 129);
+          background-color: #6bff81;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .ingredients-form-container {
+    ul {
+      li {
+        margin: 7px 6px;
+        padding: 10px;
+        border-radius: 31px;
+        align-items: center;
+        width: 9rem;
+        p {
+          font-size: 30px;
         }
       }
     }
