@@ -205,21 +205,21 @@
   display: flex;
   justify-content: center;
   margin-bottom: 5rem;
+}
 
-  button {
-    height: 3rem;
-    width: 9rem;
-    border: none;
-    border: 1px solid black;
-    background: #fff;
-    color: #000;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
+.button-green {
+  height: 3rem;
+  width: 9rem;
+  border: none;
+  border: 1px solid black;
+  background: #fff;
+  color: #000;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
 
-    &:hover {
-      background-color: #6bff81;
-    }
+  &:hover {
+    background-color: #6bff81;
   }
 }
 
