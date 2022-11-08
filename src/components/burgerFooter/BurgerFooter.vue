@@ -7,9 +7,9 @@
       </div>
 
       <p>
-        Dream Burger is family company who care about all cklient! You decided
-        what type of burger you eat today! Meaby you prefer fish burger with 4x
-        extra fishes ? Create it! And we send to you your burger of Dreams!
+        Dream Burger is family company who care about all client! You decided
+        what type of burger you eat today! Maybe you prefer fish burger with 4x
+        extra fishes ? Create it! And we arrive to you your burger of Dreams!
       </p>
     </section>
     <section class="footer-sec-2">
