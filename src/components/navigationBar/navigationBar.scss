@@ -126,12 +126,11 @@ nav {
   background-color: #e1e1e1;
   width: 14rem;
   height: 92vh;
+  transition: 0.5s;
   right: 0;
   top: 5rem;
   display: none;
   z-index: 999;
-  animation: slide-in-right-burger 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-    both;
 
   a {
     text-decoration: none;
@@ -169,6 +168,10 @@ nav {
   }
 }
 
+.closeBurger {
+  right: -14rem;
+}
+
 .overlay-burger {
   position: fixed;
   z-index: 997;
@@ -203,17 +206,6 @@ nav {
 
   .menu-icon {
     display: inline;
-  }
-}
-
-@keyframes slide-in-right-burger {
-  0% {
-    transform: translate(100%, 0);
-  }
-
-  100% {
-    transform: translate(0, 0);
-    display: none;
   }
 }
 

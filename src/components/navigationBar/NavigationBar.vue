@@ -22,7 +22,7 @@
         <span></span>
       </div>
     </div>
-    <div class="burger-menu" v-if="burger">
+    <div class="burger-menu" :class="{ closeBurger: !this.burger }">
       <router-link to="/"><span>🍔</span>Home</router-link>
       <router-link to="/burger-creator"
         ><span>🍔</span>Create burger</router-link
