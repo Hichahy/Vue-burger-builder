@@ -25,3 +25,13 @@
 .hideSucces {
   display: none;
 }
+
+@media (max-width: 600px) {
+  .modal-succes {
+    width: 100%;
+
+    h3 {
+      font-size: 15px;
+    }
+  }
+}

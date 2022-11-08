@@ -31,26 +31,26 @@ export default {
   },
   methods: {
     handleSubstractIngredient(id) {
-      const index = this.ingredientsProp.findIndex((el) => el.id === id);
-      if (this.ingredientsProp[index].counter > 0) {
-        this.ingredientsProp[index].counter--;
-        this.burgerPrice = this.burgerPrice - this.ingredientsProp[index].price;
+      const { ingredientsProp, burgerPrice, ingredientsCollectProp } = this;
+      const index = ingredientsProp.findIndex((el) => el.id === id);
+      if (ingredientsProp[index].counter > 0) {
+        ingredientsProp[index].counter--;
+        this.burgerPrice = burgerPrice - ingredientsProp[index].price;
       }
-      const indexIngredient = this.ingredientsCollectProp.indexOf(
-        this.ingredientsProp[index].ingredientName
+      const indexIngredient = ingredientsCollectProp.indexOf(
+        ingredientsProp[index].ingredientName
       );
       if (indexIngredient > -1) {
-        this.ingredientsCollectProp.splice(indexIngredient, 1);
+        ingredientsCollectProp.splice(indexIngredient, 1);
       }
     },
     handleAddIngredient(id) {
-      const index = this.ingredientsProp.findIndex((el) => el.id === id);
-      if (this.ingredientsProp[index].counter < 5) {
-        this.ingredientsProp[index].counter++;
-        this.ingredientsCollectProp.push(
-          this.ingredientsProp[index].ingredientName
-        );
-        this.burgerPrice = this.ingredientsProp[index].price + this.burgerPrice;
+      const { ingredientsProp, burgerPrice, ingredientsCollectProp } = this;
+      const index = ingredientsProp.findIndex((el) => el.id === id);
+      if (ingredientsProp[index].counter < 5) {
+        ingredientsProp[index].counter++;
+        ingredientsCollectProp.push(ingredientsProp[index].ingredientName);
+        this.burgerPrice = ingredientsProp[index].price + burgerPrice;
       }
     },
   },

@@ -91,26 +91,27 @@ export default {
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       const regAdress = /^[a-zA-Z0-9\s,'-]*$/;
       const regPhone = /^\d{9}$/;
+      const { name, surname, email, phone, adress } = this;
 
-      if (!this.name) {
+      if (!name) {
         this.errors = "Name is required";
-      } else if (!this.name.match(regNameSurname)) {
+      } else if (!name.match(regNameSurname)) {
         this.errors = "Name is invalid";
-      } else if (!this.surname) {
+      } else if (!surname) {
         this.errors = "Surname is required";
-      } else if (!this.surname.match(regNameSurname)) {
+      } else if (!surname.match(regNameSurname)) {
         this.errors = "Surname is invalid";
-      } else if (!this.email) {
+      } else if (!email) {
         this.errors = "Email is required";
-      } else if (!this.email.match(regEmail)) {
+      } else if (!email.match(regEmail)) {
         this.errors = "Email is invalid";
-      } else if (!this.adress) {
+      } else if (!adress) {
         this.errors = "Adress is required";
-      } else if (!this.adress.match(regAdress)) {
+      } else if (!adress.match(regAdress)) {
         this.errors = "Adress is invalid";
-      } else if (!this.phone) {
+      } else if (!phone) {
         this.errors = "Phone number is required";
-      } else if (!this.phone.match(regPhone)) {
+      } else if (!phone.match(regPhone)) {
         this.errors = "Phone number is invalid, pattern 123456789";
       } else {
         this.errors = null;

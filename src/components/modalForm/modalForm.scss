@@ -34,6 +34,7 @@
 
   input {
     border: none;
+    -webkit-appearance: none;
     box-shadow: rgb(204 219 232) 3px 3px 6px 0px inset,
       rgb(255 255 255 / 50%) -3px -3px 6px 1px inset;
     height: 2.4rem;
@@ -78,6 +79,18 @@
   display: flex;
   overflow: hidden;
   animation: slide-in-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@media (max-width: 600px) {
+  .modalFormVisible {
+    width: 100%;
+    h3 {
+      font-size: 15px;
+    }
+    label {
+      font-size: 10px;
+    }
+  }
 }
 
 @keyframes slide-in-right {
