@@ -1,5 +1,9 @@
 <template>
-  <div v-if="burger" class="overlay-burger" @click="toggleBurger"></div>
+  <div
+    class="overlay-burger"
+    :class="{ overlayClose: !burger }"
+    @click="toggleBurger"
+  ></div>
   <nav :class="{ 'hidden-navbar': !showNavbar && !burger }" id="navbar">
     <div class="logo">
       <img src="/images/burger-logo.svg" />
@@ -23,9 +27,9 @@
       </div>
     </div>
     <div class="burger-menu" :class="{ closeBurger: !burger }">
-      <router-link to="/"><span>🍔</span>Home</router-link>
+      <router-link to="/"><i class="bi bi-house"></i>Home</router-link>
       <router-link to="/burger-creator"
-        ><span>🍔</span>Create burger</router-link
+        ><i class="bi bi-cart"></i>Create burger</router-link
       >
     </div>
   </nav>

@@ -1,3 +1,5 @@
+@import "../../variantColors.scss";
+
 .modal-form-hide {
   position: fixed;
   z-index: 801;
@@ -5,7 +7,7 @@
   height: 32rem;
   border-radius: 2rem;
   padding: 30px;
-  background: #fff;
+  background: $modalBg;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -17,7 +19,7 @@
 
   span {
     color: white;
-    background: red;
+    background: $formError;
     width: 100%;
     position: absolute;
     padding: 10px;
@@ -41,7 +43,7 @@
     border-radius: 20px;
     margin-top: 7px;
     padding: 5px 20px;
-    outline-color: #6bff81;
+    outline-color: $secoundaryColor;
   }
 
   ul {

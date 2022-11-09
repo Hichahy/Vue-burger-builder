@@ -1,7 +1,7 @@
 <template>
   <footer>
     <section class="footer-sec-1">
-      <div>
+      <div class="logo">
         <img src="/images/burger-logo.svg" />
         <h1>Dream Burger</h1>
       </div>
