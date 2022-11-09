@@ -1,9 +1,15 @@
+@import "../../variantColors.scss";
+
 .burger-pre-containter {
+  z-index: 2;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 2rem 0;
   height: 34rem;
+  background: rgb(107,255,129);
+  background: linear-gradient(180deg, rgba(107,255,129,1) 0%, rgba(253,187,45,0) 100%);
+
 }
 
 .title-pre {
@@ -213,14 +219,14 @@
   width: 9rem;
   border: none;
   border: 1px solid black;
-  background: #fff;
+  background: $buttonPrimary;
   color: #000;
   border-radius: 30px;
   font-size: 1rem;
   cursor: pointer;
 
   &:hover {
-    background-color: #6bff81;
+    background-color: $buttonPrimaryHover;
   }
 }
 

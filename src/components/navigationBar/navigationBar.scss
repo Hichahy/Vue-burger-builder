@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
+@import '../../variantColors.scss';
 nav {
   height: 5rem;
   width: 100%;
   display: flex;
   position: sticky;
   top: 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 10px 30px;
   align-items: center;
   z-index: 999;
   transition: 0.5s all ease-out;
-  background-color: #e1e1e1;
+  background-color: $primaryColor;
 
   img {
     height: 100%;
@@ -30,23 +31,22 @@ nav {
 
   a {
     margin-left: 1rem;
-    color: #000;
+    color: $navLinkColor;
     text-decoration: none;
     font-size: 17px;
-    border-radius: 10px;
-    padding: 2px 7px;
-    box-shadow: inset 0 0 0 0 #fff;
-    transition: color 1s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 20px;
+    padding: 10px 7px;
+    box-shadow: inset 0 0 0 0 $navLinkHover;
+    transition: color 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
 
     &:hover {
-      border-radius: 10px;
-      box-shadow: inset 130px 0 0 0 #fff;
+      border-radius: 20px;
+      box-shadow: inset 10px 10px 40px 20px $navLinkHover;
     }
   }
 
   a.router-link-exact-active {
-    border-radius: 10px;
-    background: #fff;
+    background: $secoundaryColor;
   }
 }
 
@@ -124,7 +124,7 @@ nav {
 
 .burger-menu {
   position: fixed;
-  background-color: #e1e1e1;
+  background-color: $primaryColor;
   width: 14rem;
   height: 92vh;
   transition: 0.5s;
@@ -137,34 +137,34 @@ nav {
     text-decoration: none;
     padding: 2px 7px;
     box-shadow: inset 0 0 0 0 #fff;
-    transition: 0.3s;
     height: 3rem;
     background: transparent;
     display: flex;
     color: #000;
     font-size: 1rem;
-    margin: 10px 0;
+    margin: 10px 20px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
 
-    span {
+    i {
       display: none;
     }
   }
 
   a.router-link-exact-active {
-    background-color: #6bff81;
+    background-color: $secoundaryColor;
     position: relative;
-    transition: 1s;
+    margin: 10px 20px;
+    border-radius: 30px;
 
-    span {
+    i {
       display: inline;
       left: 15px;
       font-size: 20px;
       position: absolute;
-      -webkit-animation: jello-horizontal 1s both;
-      animation: jello-horizontal 1s both;
+      -webkit-animation: heartbeat 1.5s ease-in-out both;
+      animation: heartbeat 1.5s ease-in-out both;
     }
   }
 }
@@ -184,16 +184,27 @@ nav {
   width: 100%;
   top: 0;
   left: 0;
+  background: $overlay;
   display: none;
-  background: #000000b0;
   backdrop-filter: blur(2px);
   -webkit-animation: fade-in 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade-in 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
+.overlayClose {
+  -webkit-animation: fade-out 0.3s ease-out both;
+  animation: fade-out 0.3s ease-out both;
+}
+
 @media (max-width: 600px) {
   .overlay-burger {
     display: flex;
+  }
+
+  .logo {
+    img {
+      height: 2rem;
+    }
   }
 
   .burger-menu {
@@ -214,63 +225,89 @@ nav {
   }
 }
 
-@-webkit-keyframes jello-horizontal {
+@-webkit-keyframes fade-out {
   0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
+    opacity: 1;
   }
   100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    opacity: 0;
   }
 }
-@keyframes jello-horizontal {
+@keyframes fade-out {
   0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
+    opacity: 1;
   }
   100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
