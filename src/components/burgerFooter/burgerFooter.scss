@@ -1,11 +1,11 @@
-@import '../../variantColors.scss';
+@import "../../variantColors.scss";
 
 footer {
   height: 20rem;
   background-color: $primaryColor;
   width: 100%;
   padding: 30px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: #64646f33 0 7px 29px 0;
   display: flex;
   justify-content: space-evenly;
 
@@ -16,7 +16,6 @@ footer {
   .footer-sec-1 {
     display: flex;
     align-items: center;
-    display: flex;
     align-items: flex-start;
     flex-direction: column;
     width: 19rem;
@@ -32,14 +31,12 @@ footer {
 
     h1 {
       margin: 0;
-      font-family: 'Pacifico', cursive;
+      font-family: Pacifico, cursive;
     }
   }
 
   .footer-sec-2 {
     margin-left: 30px;
-    h2 {
-    }
 
     ul {
       padding: 0;
@@ -60,6 +57,9 @@ footer {
       background: $primaryColor;
       width: 3rem;
       display: flex;
+      font-size: 25px;
+      color: black;
+      cursor: pointer;
       height: 3rem;
       border-radius: 50%;
       align-items: center;
@@ -76,12 +76,6 @@ footer {
     div {
       display: flex;
       flex-wrap: wrap;
-    }
-
-    i {
-      font-size: 25px;
-      color: black;
-      cursor: pointer;
     }
   }
 }

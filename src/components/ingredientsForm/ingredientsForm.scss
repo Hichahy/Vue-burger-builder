@@ -4,7 +4,7 @@
   padding: 10px 30px;
 
   h2 {
-    font-family: 'Pacifico', cursive;
+    font-family: Pacifico, cursive;
   }
 
   ul {
@@ -39,7 +39,7 @@
         border: none;
         background-color: $primaryColor;
         border-radius: 50%;
-        color: rgb(0, 0, 0);
+        color: #000;
         padding: 10px;
         height: 35px;
         font-size: 24px;
@@ -61,6 +61,7 @@
         border-radius: 31px;
         align-items: center;
         width: 9rem;
+
         p {
           font-size: 30px;
         }
