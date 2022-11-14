@@ -9,6 +9,10 @@ footer {
   display: flex;
   justify-content: space-evenly;
 
+  .logo {
+    height: auto;
+  }
+
   .footer-sec-1 {
     display: flex;
     align-items: center;
@@ -53,7 +57,7 @@ footer {
     margin-left: 30px;
 
     a {
-      background: $footerBgMedia;
+      background: $primaryColor;
       width: 3rem;
       display: flex;
       height: 3rem;

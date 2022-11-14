@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import '../../variantColors.scss';
+
 nav {
   height: 5rem;
   width: 100%;
   display: flex;
   position: sticky;
   top: 0;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: #64646f33 0 7px 29px 0;
   padding: 10px 30px;
   align-items: center;
   z-index: 999;
@@ -34,19 +35,20 @@ nav {
     color: $navLinkColor;
     text-decoration: none;
     font-size: 17px;
-    border-radius: 20px;
     padding: 10px 7px;
-    box-shadow: inset 0 0 0 0 $navLinkHover;
-    transition: color 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+    background-size: 10rem;
+    background-position: center;
 
     &:hover {
-      border-radius: 20px;
-      box-shadow: inset 10px 10px 40px 20px $navLinkHover;
+      background-image: url('/public/images/stroke.svg');
     }
   }
 
   a.router-link-exact-active {
-    background: $secoundaryColor;
+    background-size: 10rem;
+    background-position: center;
+    background-image: url('/public/images/stroke.svg');
+    background-repeat: no-repeat;
   }
 }
 
@@ -153,10 +155,10 @@ nav {
   }
 
   a.router-link-exact-active {
-    background-color: $secoundaryColor;
-    position: relative;
-    margin: 10px 20px;
-    border-radius: 30px;
+    background-size: 10rem;
+    background-position: center;
+    background-image: url('/public/images/stroke.svg');
+    background-repeat: no-repeat;
 
     i {
       display: inline;

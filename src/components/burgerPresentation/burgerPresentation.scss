@@ -219,14 +219,14 @@
   width: 9rem;
   border: none;
   border: 1px solid black;
-  background: $buttonPrimary;
+  background: $primaryColor;
   color: #000;
   border-radius: 30px;
   font-size: 1rem;
   cursor: pointer;
 
   &:hover {
-    background-color: $buttonPrimaryHover;
+    background-color: $secoundaryColor;
   }
 }
 
