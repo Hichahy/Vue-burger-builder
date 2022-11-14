@@ -37,7 +37,7 @@
   input {
     border: none;
     -webkit-appearance: none;
-    box-shadow: rgb(204 219 232) 3px 3px 6px 0px inset,
+    box-shadow: rgb(204 219 232) 3px 3px 6px 0 inset,
       rgb(255 255 255 / 50%) -3px -3px 6px 1px inset;
     height: 2.4rem;
     border-radius: 20px;
@@ -66,6 +66,7 @@
     li:nth-child(1) {
       width: 45%;
     }
+
     li:nth-child(2) {
       width: 45%;
     }
@@ -86,9 +87,11 @@
 @media (max-width: 600px) {
   .modalFormVisible {
     width: 100%;
+
     h3 {
       font-size: 15px;
     }
+
     label {
       font-size: 10px;
     }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="toggle-box">
     <p class="toggle-title">Black Bun?</p>
     <label class="switch">
       <input type="checkbox" @click="toggle" />

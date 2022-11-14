@@ -6,10 +6,7 @@
       <h3>Looks delicious. Check your order 🍔</h3>
       <h4>🥯 Burger bun: {{ `${blackBun ? "black" : "white"}` }}</h4>
       <ul>
-        <li
-          v-for="i in ingredientstProp.filter((i) => i.counter > 0)"
-          :key="i.id"
-        >
+        <li v-for="i in ingredientFilter" :key="i.id">
           <p>{{ i.ingredient }} x{{ i.counter }}</p>
         </li>
       </ul>
@@ -24,6 +21,9 @@
   <ModalForm
     v-if="hideSummaryCard"
     :hideSummaryCard="hideSummaryCard"
+    :ingredientFilter="ingredientFilter"
+    :blackBun="blackBun"
+    :burgerPriceAcumulator="burgerPriceAcumulator"
     @close-modal="$emit('close-modal')"
   />
 </template>
@@ -46,6 +46,9 @@ export default {
     };
   },
   computed: {
+    ingredientFilter() {
+      return this.ingredientstProp.filter((i) => i.counter > 0);
+    },
     burgerPriceAcumulator() {
       const price = this.ingredientstProp.map((i) => i.price * i.counter);
       const initialValue = 0;

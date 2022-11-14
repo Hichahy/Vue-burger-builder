@@ -1,4 +1,10 @@
-@import "../../../variantColors.scss";
+@import '../../../variantColors.scss';
+
+.toggle-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
 .switch {
   position: relative;
@@ -20,14 +26,14 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $primaryColor;
+  background-color: rgb(189, 189, 189);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-.slider:before {
+.slider::before {
   position: absolute;
-  content: '';
+  content: "";
   height: 26px;
   width: 26px;
   left: 4px;
@@ -41,7 +47,7 @@ input:checked + .slider {
   background-color: $toggleBtnPrimaryAfter;
 }
 
-input:checked + .slider:before {
+input:checked + .slider::before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -51,11 +57,13 @@ input:checked + .slider:before {
   border-radius: 34px;
 }
 
-.slider.round:before {
+.slider.round::before {
   border-radius: 50%;
 }
 
 .toggle-title {
   margin: 0;
+  color: #000;
+  margin-bottom: 5px;
   font-size: 14px;
 }
