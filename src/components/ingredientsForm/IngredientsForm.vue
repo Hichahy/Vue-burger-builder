@@ -1,7 +1,7 @@
 <template>
   <div class="ingredients-form-container">
     <h2>Choise your ingredients</h2>
-    <h2>Price: {{ burgerPrice }}$</h2>
+    <h2 data-test="price">Price: {{ burgerPrice }}$</h2>
     <ul>
       <li
         :class="{ maxAmount: i.counter === 5 }"
@@ -9,9 +9,11 @@
         :key="i.id"
       >
         <p>{{ i.ingredient }}</p>
-        <button @click="handleSubstractIngredient(i.id)">-</button>
+        <button data-test="substract" @click="handleSubstractIngredient(i.id)">
+          -
+        </button>
         <span>{{ i.counter }}</span>
-        <button @click="handleAddIngredient(i.id)">+</button>
+        <button data-test="add" @click="handleAddIngredient(i.id)">+</button>
       </li>
     </ul>
   </div>
