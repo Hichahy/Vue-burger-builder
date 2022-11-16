@@ -64,7 +64,7 @@
 
 <script>
 import ModalSucces from "../modalSucces/ModalSucces.vue";
-import axios from "axios";
+// import axios from "axios";
 import "./modalForm.scss";
 
 export default {
@@ -90,21 +90,21 @@ export default {
     };
   },
   methods: {
-    handleSendOrder() {
-      const form = {
-        name: this.name,
-        surname: this.surname,
-        email: this.email,
-        adress: this.adress,
-        phone: this.phone,
-        bun: this.blackBun,
-        ingredients: this.ingredientFilter,
-        price: this.burgerPriceAcumulator,
-      };
-      axios
-        .post("url", form)
-        .then((response) => (this.articleId = response.data.id));
-    },
+    // handleSendOrder() {
+    //   const form = {
+    //     name: this.name,
+    //     surname: this.surname,
+    //     email: this.email,
+    //     adress: this.adress,
+    //     phone: this.phone,
+    //     bun: this.blackBun,
+    //     ingredients: this.ingredientFilter,
+    //     price: this.burgerPriceAcumulator,
+    //   };
+    //   axios
+    //     .post("url", form)
+    //     .then((response) => (this.articleId = response.data.id));
+    // },
 
     handleCheckForm(e) {
       e.preventDefault();
@@ -138,7 +138,7 @@ export default {
       } else {
         this.errors = null;
         this.showSucces = false;
-        this.handleSendOrder();
+        // this.handleSendOrder();
       }
     },
   },
